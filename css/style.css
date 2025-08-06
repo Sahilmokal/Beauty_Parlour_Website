@@ -8,7 +8,7 @@ body {
     font-family: 'Segoe UI', sans-serif;
     background-color: #111;
     color: #fff;
-    padding-top: 140px;
+    padding-top: 120px;
 }
 
 header {
@@ -156,10 +156,134 @@ nav a:hover {
     }
 
     header {
-        height: 100px;
+        height: 120px;
     }
 
     body {
         padding-top: 120px;
     }
 }
+
+/* ----------------------- */
+/* Landing Section Styling */
+/* ----------------------- */
+
+.landing-section {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 120px); /* Full screen minus fixed header */
+  overflow: hidden;
+  margin-top: 0;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Centered quote text */
+.caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 2rem;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px 40px;
+  border-radius: 12px;
+  text-align: center;
+  font-family: 'Georgia', serif;
+  max-width: 90%;
+}
+
+/* Navigation Arrows */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  transition: 0.3s ease;
+  user-select: none;
+  border-radius: 0 3px 3px 0;
+  background-color: rgba(0,0,0,0.4);
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Fade animation */
+.fade {
+  animation: fadeEffect 1s ease-in-out;
+}
+
+@keyframes fadeEffect {
+  from { opacity: 0.3; }
+  to { opacity: 1; }
+}
+
+/* ---------------------- */
+/* Responsive Adjustments */
+/* ---------------------- */
+@media screen and (max-width: 768px) {
+  .caption {
+    font-size: 1.2rem;
+    padding: 15px 25px;
+  }
+
+  .prev,
+  .next {
+    font-size: 24px;
+    padding: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .caption {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  .prev,
+  .next {
+    font-size: 20px;
+    padding: 10px;
+  }
+}
+/* Limit landing section height on smaller screens */
+@media screen and (max-width: 768px) {
+  .landing-section {
+    height: 60vh !important; /* reduce height on mobile */
+    max-height: 600px;        /* optional max height */
+  }
+}
+

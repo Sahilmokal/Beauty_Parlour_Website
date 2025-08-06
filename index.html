@@ -49,5 +49,54 @@
       document.getElementById("mobileMenu").classList.toggle("active");
     }
   </script>
+  
+  <section class="landing-section">
+  <div class="slider">
+    <div class="slide fade">
+      <img src="images/bg_landing.jpg" alt="Beauty Service 1">
+      <div class="caption">"Beauty begins the moment you decide to be yourself."</div>
+    </div>
+    <div class="slide fade">
+      <img src="images/bg_landing02.png" alt="Beauty Service 2">
+      <div class="caption">"Let your beauty shine from within."</div>
+    </div>
+    <div class="slide fade">
+      <img src="images/bg_landing03.png" alt="Beauty Service 3">
+      <div class="caption">"At Sanskruti, we celebrate the art of beauty."</div>
+    </div>
+
+    <!-- Navigation arrows -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+</section>
+
+  <script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function showSlides(n) {
+    const slides = document.getElementsByClassName("slide");
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slides[slideIndex - 1].style.display = "block";
+  }
+
+  // Optional: Auto-slide
+  setInterval(() => {
+    plusSlides(1);
+  }, 6000); // change every 6 seconds
+</script>
+
+
+</section>
+
 </body>
 </html>
