@@ -14,7 +14,7 @@
       <nav class="nav-left">
         <ul>
           <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
+          <li><a href="#about">About</a></li>
           <li><a href="#">Services</a></li>
         </ul>
       </nav>
@@ -96,6 +96,62 @@
     plusSlides(1);
   }, 6000); // change every 6 seconds
 </script>
+<!-- ABOUT US SECTION -->
+<section id="about" class="about-section">
+  <div class="about-container">
+    <div class="about-image">
+      <img src="images/Demo2.png" alt="About Sanskruti Makeover">
+    </div>
+    <div class="about-text">
+      <h2>About Sanskruti Makeover</h2>
+      <p>
+        At <strong>Sanskruti Makeover</strong>, we believe beauty is an art — and we bring it to life with passion and precision.
+        Our expert stylists and beauticians offer personalized care using only the finest products and techniques to enhance your natural glow.
+      </p>
+      <p>
+        From bridal makeovers to skincare, every service is designed to pamper you. Visit us in Thane and experience the transformation you deserve.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- MEET THE FOUNDER SECTION -->
+<section class="founder-section">
+  <div class="founder-container">
+    <div class="founder-image">
+      <img src="images/founder.jpg" alt="Founder - Sanskruti Makeover">
+    </div>
+    <div class="founder-text">
+      <h2>Meet the Founder</h2>
+      <p>
+        <strong>Mrs. Vanita Chaudhary</strong> is the heart and soul of <strong>Sanskruti Makeover</strong>. With over a decade of experience in beauty and bridal styling, she has helped hundreds of clients discover their most confident selves.
+      </p>
+      <p>
+        Her passion for empowering women through beauty shines in every service we provide. You're not just getting a makeover — you're becoming part of a family.
+      </p>
+    </div>
+  </div>
+</section>
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function(e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute("href"));
+      const yOffset = -120; // height of header
+      const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+      window.scrollTo({ top: y, behavior: "smooth" });
+    });
+  });
+</script>
+<section class="section-divider">
+  <div class="divider-line"></div>
+  <h2 class="divider-title">Crafted With Elegance</h2>
+  <div class="divider-line"></div>
+</section>
+
 <footer class="footer">
   <div class="footer-container">
     <div class="footer-section contact-info">
@@ -127,6 +183,7 @@
         <li><a href="#">View All Services</a></li>
       </ul>
     </div>
+
 
     <div class="footer-section social-links">
   <h3>Social Links</h3>
