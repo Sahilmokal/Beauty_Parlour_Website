@@ -146,11 +146,163 @@
     });
   });
 </script>
+
+<div class="services-section">
+
+  <section class="section-divider">
+    <div class="divider-line"></div>
+    <h2 class="divider-title">Our Beauty Services</h2>
+    <div class="divider-line"></div>
+  </section>
+
+  <section class="services-grid">
+    <div class="service-card">
+      <img src="images/hair-styling.jpg" alt="Hair Styling">
+      <div class="service-content">
+        <h3>Hair Styling</h3>
+        <p>Trendy, bridal, or casual styles tailored for every occasion.</p>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <img src="images/hair-cutting.jpg" alt="Hair Cutting">
+      <div class="service-content">
+        <h3>Hair Cutting</h3>
+        <p>Professional haircuts for women and kids by expert stylists.</p>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <img src="images/hair-colouring.jpg" alt="Hair Colouring">
+      <div class="service-content">
+        <h3>Hair Colouring</h3>
+        <p>Global, highlights, streaks & root touch-ups with top brands.</p>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <img src="images/hair-spa.jpg" alt="Hair Spa">
+      <div class="service-content">
+        <h3>Hair Spa</h3>
+        <p>Deep nourishment and rejuvenation for shiny, healthy hair.</p>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <img src="images/facial.jpg" alt="Facials">
+      <div class="service-content">
+        <h3>Facials & Cleanups</h3>
+        <p>Glow-enhancing facials for all skin types using premium products.</p>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <img src="images/bridal-makeup.jpg" alt="Bridal Makeup">
+      <div class="service-content">
+        <h3>Bridal Makeup</h3>
+        <p>Exclusive bridal packages with makeup, hair, and draping.</p>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <img src="images/party-makeup.jpg" alt="Party Makeup">
+      <div class="service-content">
+        <h3>Party Makeup</h3>
+        <p>Elegant party looks with HD or airbrush makeup options.</p>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <img src="images/nail-art.jpg" alt="Nail Art">
+      <div class="service-content">
+        <h3>Nail Art</h3>
+        <p>Trendy nail extensions, gel polish, and custom nail art designs.</p>
+      </div>
+    </div>
+     
+  </section>
+
+</div>
+<div class="reviews">
+  <!-- Divider Title -->
 <section class="section-divider">
   <div class="divider-line"></div>
-  <h2 class="divider-title">Crafted With Elegance</h2>
+  <h2 class="divider-title">Your Review Matters!!!</h2>
   <div class="divider-line"></div>
 </section>
+
+<!-- Review Section -->
+<section class="review-section">
+  <button class="arrow left" id="prevReview">&#10094;</button>
+
+  <div class="review-box">
+    <div class="review active">
+      <p class="review-text">"Absolutely loved the facial treatment! My skin has never looked better!"</p>
+      <p class="review-author">– Priya Sharma, Customer</p>
+    </div>
+    <div class="review">
+      <p class="review-text">"SanMakeover provides top-class service. Highly recommended!"</p>
+      <p class="review-author">– Anjali Mehta, Regular Client</p>
+    </div>
+    <div class="review">
+      <p class="review-text">"The staff is friendly and professional. Loved the ambience!"</p>
+      <p class="review-author">– Riya Kapoor, First-Time Visitor</p>
+    </div>
+    <div class="review">
+      <p class="review-text">"Tried their hair spa, and it was super relaxing. 10/10!"</p>
+      <p class="review-author">– Sneha Patil, Client</p>
+    </div>
+    <div class="review">
+      <p class="review-text">"One of the best salons in town. They never disappoint."</p>
+      <p class="review-author">– Megha Nair, Happy Customer</p>
+    </div>
+  </div>
+
+  <button class="arrow right" id="nextReview">&#10095;</button>
+</section>
+<script>
+  const reviews = document.querySelectorAll(".review");
+  const prevBtn = document.getElementById("prevReview");
+  const nextBtn = document.getElementById("nextReview");
+  let currentReview = 0;
+  let reviewInterval;
+
+  function showReview(index) {
+    reviews.forEach((review, i) => {
+      review.classList.remove("active");
+    });
+    currentReview = (index + reviews.length) % reviews.length;
+    reviews[currentReview].classList.add("active");
+  }
+
+  function showNextReview() {
+    showReview(currentReview + 1);
+  }
+
+  function showPrevReview() {
+    showReview(currentReview - 1);
+  }
+
+  prevBtn.addEventListener("click", () => {
+    showPrevReview();
+    resetInterval();
+  });
+
+  nextBtn.addEventListener("click", () => {
+    showNextReview();
+    resetInterval();
+  });
+
+  function resetInterval() {
+    clearInterval(reviewInterval);
+    reviewInterval = setInterval(showNextReview, 5000);
+  }
+
+  // Start auto-switching
+  reviewInterval = setInterval(showNextReview, 5000);
+</script>
+
+</div>
 
 <footer class="footer">
   <div class="footer-container">
