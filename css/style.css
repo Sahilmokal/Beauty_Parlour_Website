@@ -756,4 +756,144 @@ strong {
   }
 }
 
+/* Main Section */
+.appointment-section {
+  background: #fff;
+  padding: 40px 80px;
+  font-family: 'Poppins', sans-serif;
+  color: #000;
+  max-width: 100%;
+  margin: auto;
+}
+
+/* Header */
+.section-header {
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.section-header h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 5px;
+}
+
+.section-header .sm-subtitle {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Two Column Layout */
+.appointment-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+/* Left: Form */
+.appointment-left {
+  flex: 1 1 60%;
+}
+
+.appointment-form label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: #555;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+
+.appointment-form input,
+.appointment-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  background: #fff;
+  color: #000;
+  transition: border-color 0.3s ease;
+}
+
+.appointment-form input:focus,
+.appointment-form textarea:focus {
+  border-color: #000;
+  outline: none;
+}
+
+/* Button */
+.appointment-form button {
+  background: #000;
+  color: #fff;
+  font-weight: 600;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.appointment-form button:hover {
+  background: #333;
+}
+
+/* Right: Contact Info */
+.appointment-right {
+  flex: 1 1 35%;
+}
+
+.appointment-right h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.appointment-right p {
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.appointment-right a {
+  color: #000;
+  text-decoration: none;
+}
+
+.appointment-right a:hover {
+  text-decoration: underline;
+}
+
+/* Social Icons */
+.social-links {
+  margin-top: 15px;
+}
+
+.social-links a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background: #000;
+  color: #fff;
+  text-align: center;
+  line-height: 35px;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-right: 8px;
+  transition: background 0.3s ease;
+}
+
+.social-links a:hover {
+  background: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .appointment-content {
+    flex-direction: column;
+  }
+}
 
