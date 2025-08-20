@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/learn-page.css">
+</head>
+<body>
+    <header>
+    <div class="header-container">
+      <nav class="nav-left">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#">Services</a></li>
+        </ul>
+      </nav>
+
+      <div class="logo-container">
+        <img src="images/logo.png" alt="SanMakeover Logo" class="logo-img" />
+      </div>
+
+      <nav class="nav-right">
+        <ul>
+          <li><a href="#">Location</a></li>
+          <li><a href="learnwithus.html">Learn With Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+    </div>
+  </header>
+  <div class="learn">
+
+
+<!-- HERO with background slideshow -->
+<section class="hero">
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="hero-inner container">
+      <p class="eyebrow">Learn With Us</p>
+      <h1 class="h1">Professional Beauty Education by <span class="accent">Vanita</span></h1>
+      <p class="lead">
+        Career-focused training with real salon practice. <br>
+        Small batches • Personalized attention • Job-ready skills.
+      </p>
+      <div style="margin-top:18px">
+        <a class="btn" href="contact.html">Enroll Now</a>
+      </div>
+    </div>
+  </section>
+
+<!-- Trainer Section -->
+<section class="trainer container">
+<div class="wrap">
+<div class="trainer-card">
+<!-- Replace with your trainer photo file -->
+<img src="images/founder.jpg" alt="Vanita – Founder & Lead Trainer"/>
+</div>
+<div class="texty">
+<p class="eyebrow">Your Mentor</p>
+<h2 class="h2">Vanita — Founder & Beauty Expert</h2>
+<p class="lead2">With extensive salon and bridal experience, Vanita mentors every learner personally, focusing on technique, hygiene, client handling, and portfolio building.</p>
+<ul class="bullets">
+<li>One-to-one guidance and hands-on practice on live models.</li>
+<li>Product knowledge (professional brands), tool handling, and sanitation.</li>
+<li>Portfolio & shoot day support to kickstart freelancing or salon jobs.</li>
+</ul>
+</div>
+</div>
+</section>
+
+
+<!-- Courses Section (4 courses with details and image slots you can replace) -->
+
+ 
+<div class="container">
+<div class="intro center">
+<p class="eyebrow">Courses</p>
+<h2 class="h2">Our Professional Programs</h2>
+<p class="lead2">Carefully curated, industry-relevant modules to make you job-ready. Replace images with your own photos named as below or edit the <code>src</code> paths.</p>
+</div>
+
+
+<div class="grid course-grid">
+<!-- 1. Professional Hair Styling -->
+<article class="course">
+<img src="images/course-hair.jpg" alt="Professional hair styling class" />
+<div class="course-body">
+<div class="course-title">
+<h3 class="h3">Professional Hair Styling</h3>
+<span class="badge">6–8 weeks</span>
+</div>
+<ul class="bullets">
+<li>Core: Sectioning, blow-dry, ironing, tonging, braids, buns, updos.</li>
+<li>Chemical basics: Global, root touch-up, basic highlights & toners.</li>
+<li>Cutting: One-length, layers, graduation, face-framing; men’s basics.</li>
+<li>Hygiene & tool care; consultation & style selection per face shape.</li>
+</ul>
+<div class="meta"><span>Live models</span><span>Kit guidance</span><span>Portfolio day</span></div>
+</div>
+</article>
+
+
+<!-- 2. Bridal & Party Makeup -->
+<article class="course">
+<img src="images/course-makeup.jpg" alt="Bridal makeup practice" />
+<div class="course-body">
+<div class="course-title">
+<h3 class="h3">Bridal & Party Makeup</h3>
+<span class="badge">5–6 weeks</span>
+</div>
+<ul class="bullets">
+<li>Skin prep, color correction, base building, long-wear techniques.</li>
+<li>Eye styles: Soft glam, cut-crease, halo, smokey; lash application.</li>
+<li>Bridal looks: Traditional, reception, sangeet, cocktail.</li>
+<li>Product mapping by skin type & undertone; hygiene & sanitization.</li>
+</ul>
+<div class="meta"><span>HD/Non-HD</span><span>Draping basics</span><span>Photoshoot support</span></div>
+</div>
+</article>
+
+
+<!-- 3. Skin & Beauty Treatments -->
+<article class="course">
+<img src="images/course-skin.jpg" alt="Facial and skincare treatment class" />
+<div class="course-body">
+<div class="course-title">
+<h3 class="h3">Skin & Beauty Treatments</h3>
+<span class="badge">4–6 weeks</span>
+</div>
+<ul class="bullets">
+<li>Facials: Clean-up, classic facial steps, exfoliation & massage lines.</li>
+<li>Skin analysis & mapping; treatment selection by concern.</li>
+<li>Threading, waxing basics, de-tan; masque & serum layering.</li>
+<li>Clinic-grade hygiene, client consultation & aftercare.</li>
+</ul>
+<div class="meta"><span>Derm basics</span><span>SOPs</span><span>Retail upsell</span></div>
+</div>
+</article>
+
+
+<!-- 4. Nail Art & Extensions -->
+<article class="course">
+<img src="images/course-nail.jpg" alt="Nail art and gel extensions practice" />
+<div class="course-body">
+<div class="course-title">
+<h3 class="h3">Nail Art & Extensions</h3>
+<span class="badge">3–5 weeks</span>
+</div>
+<ul class="bullets">
+<li>Cuticle care, nail prep, forms & tips, gel polish application.</li>
+<li>Gel/Acrygel extensions, refills, removals & repairs.</li>
+<li>Art: French, chrome, ombré, decals, foils, freehand basics.</li>
+<li>Hygiene, pricing, client care & maintenance schedules.</li>
+</ul>
+<div class="meta"><span>Starter kit</span><span>Sanitation</span><span>Client aftercare</span></div>
+</div>
+</article>
+</div>
+</div>
+</section>
+
+
+<!-- CTA Panel -->
+<section class="cta container">
+<div class="panel center">
+<h2 class="h2">Ready to Start?</h2>
+<p class="lead">Limited seats per batch for focused learning. Use your own photos by replacing the image paths above — the layout adapts automatically.</p>
+<a class="btn" href="contact.html">Contact & Enrollment</a>
+</div>
+</section>
+</div>
+
+
+<footer>
+  <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section contact-info">
+      <h3>Contact Info</h3>
+      <p><strong>Phone:</strong><br>+91 9967563589</p>
+      <p><strong>Email:</strong><br><a href="mailto:sahilmokal19@gmail.com">sahilmokal19@gmail.com</a></p>
+    </div>
+
+    <div class="footer-section quick-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Location</a></li>
+        <li><a href="#">Learn with Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section services">
+      <h3>Services</h3>
+      <ul>
+        <li>Eys Leshh</li>
+        <li>BB Glow Facial</li>
+        <li>Hydra Facial</li>
+        <li>Plumping</li>
+        <li>Nail Art</li>
+        <li><a href="#">View All Services</a></li>
+      </ul>
+    </div>
+
+
+    <div class="footer-section social-links">
+  <h3>Social Links</h3>
+  <div class="social-icons">
+    <a href="https://www.instagram.com/vanita_makeover_111/" target="_blank" aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="#" target="_blank" aria-label="Facebook">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="#" target="_blank" aria-label="Twitter">
+      <i class="fab fa-twitter"></i>
+    </a>
+    <a href="#" target="_blank" aria-label="LinkedIn">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+  </div>
+</div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 SanMakeover. All rights reserved.</p>
+  </div>
+</footer>
+
+
+    
+</body>
+</html>
