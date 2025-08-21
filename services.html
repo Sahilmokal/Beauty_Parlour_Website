@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/services.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <nav class="nav-left">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                </ul>
+            </nav>
+
+            <div class="logo-container">
+                <img src="images/logo.png" alt="SanMakeover Logo" class="logo-img" />
+            </div>
+
+            <nav class="nav-right">
+                <ul>
+                    <li><a href="location.html">Location</a></li>
+                    <li><a href="learnwithus.html">Learn With Us</a></li>
+                    <li><a href="contact.html">Book Appointment</a></li>
+                </ul>
+            </nav>
+
+            <button class="hamburger" onclick="toggleMenu()">☰</button>
+        </div>
+    </header>
+    <!-- Services Intro Section -->
+<!-- Services Intro Section -->
+<section class="services-intro">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="icon">
+      <i class="fa-solid fa-spa"></i>
+    </div>
+    <h2>OUR SERVICES</h2>
+    <p>
+      Step into elegance and indulge in luxury.  
+      At <span class="highlight">SanMakeover</span>, we believe beauty is an experience — not just a service.  
+      From <strong>premium hair styling</strong> to <strong>bridal transformations</strong>,  
+      every detail is crafted with care, passion, and expertise.  
+      Let us pamper you with treatments that rejuvenate your skin, refresh your look,  
+      and uplift your spirit.  
+    </p>
+  </div>
+</section>
+
+
+    <div class="services-section">
+
+  
+
+  <section class="services-grid">
+    <div class="service-card" data-service="Hair Styling">
+      <img src="images/hair-styling.jpg" alt="Hair Styling">
+      <div class="service-content">
+        <h3>Hair Styling</h3>
+        <p>Trendy, bridal, or casual styles tailored for every occasion.</p>
+      </div>
+    </div>
+
+    <div class="service-card" data-service="Hair Cutting">
+      <img src="images/hair-cutting.jpg" alt="Hair Cutting">
+      <div class="service-content">
+        <h3>Hair Cutting</h3>
+        <p>Professional haircuts for women and kids by expert stylists.</p>
+      </div>
+    </div>
+
+    <div class="service-card"data-service="Hair Colouring">
+      <img src="images/hair-colouring.jpg" alt="Hair Colouring">
+      <div class="service-content">
+        <h3>Hair Colouring</h3>
+        <p>Global, highlights, streaks & root touch-ups with top brands.</p>
+      </div>
+    </div>
+
+    <div class="service-card" data-service="Hair Colouring">
+      <img src="images/hair-spa.jpg" alt="Hair Spa">
+      <div class="service-content">
+        <h3>Hair Spa</h3>
+        <p>Deep nourishment and rejuvenation for shiny, healthy hair.</p>
+      </div>
+    </div>
+
+    <div class="service-card" data-service="Facials & Cleanups">
+      <img src="images/facial.jpg" alt="Facials">
+      <div class="service-content">
+        <h3>Facials & Cleanups</h3>
+        <p>Glow-enhancing facials for all skin types using premium products.</p>
+      </div>
+    </div>
+
+    <div class="service-card" data-service="Bridal Makeup">
+      <img src="images/bridal-makeup.jpg" alt="Bridal Makeup">
+      <div class="service-content">
+        <h3>Bridal Makeup</h3>
+        <p>Exclusive bridal packages with makeup, hair, and draping.</p>
+      </div>
+    </div>
+
+    <div class="service-card" data-service="Party Makeup">
+      <img src="images/party-makeup.jpg" alt="Party Makeup">
+      <div class="service-content">
+        <h3>Party Makeup</h3>
+        <p>Elegant party looks with HD or airbrush makeup options.</p>
+      </div>
+    </div>
+
+    <div class="service-card" data-service="Nail Art">
+      <img src="images/nail-art.jpg" alt="Nail Art">
+      <div class="service-content">
+        <h3>Nail Art</h3>
+        <p>Trendy nail extensions, gel polish, and custom nail art designs.</p>
+      </div>
+    </div>
+     
+  </section>
+  <section id="service-detail" class="service-detail">
+  <span class="close-btn">&times;</span>
+  <div class="sd-wrap">
+    <div class="sd-head">
+      <span class="sd-icon"><i class="fa-solid fa-spa"></i></span>
+      <h2 id="service-title">Service Title</h2>
+      <p id="service-description" class="sd-sub">Service details will appear here.</p>
+    </div>
+    <a href="contact.html" class="btn-outline-gold">Book Now</a>
+  </div>
+</section>
+
+  <!-- ========== DETAILED SERVICES (place above footer) ========== -->
+<section class="services-details">
+  <div class="sd-wrap">
+    <div class="sd-head">
+      <span class="sd-icon"><i class="fa-solid fa-spa"></i></span>
+      <h2>Detailed Services</h2>
+      <p class="sd-sub">
+        Premium care with expert hands. Explore what each service includes so you know exactly what to expect.
+      </p>
+    </div>
+
+    <div class="sd-grid">
+      <!-- Hair Styling -->
+      <article class="sd-card">
+        <h3>Hair Styling</h3>
+        <p>
+          From bridal buns to glam waves and sleek ponytails, every look is tailored to your outfit and face shape.
+          We prep with heat protectants and volumizers, then finish with humidity-resistant setting.
+          Trials available for brides/events. Pins and accessories can be arranged on request.
+          Expect a comfortable prep flow and photo-ready finish that lasts for hours.
+        </p>
+        <a href="contact.html" class="btn-outline-gold">Book Now</a>
+      </article>
+
+      <!-- Hair Cutting -->
+      <article class="sd-card">
+        <h3>Hair Cutting</h3>
+        <p>
+          Precision cuts designed around your lifestyle—bobs, layers, fringes, or trims for women and kids.
+          We begin with a face-shape & density consult, then shape for movement and easy home styling.
+          Includes cleanse and basic blow-dry. Style education and maintenance tips provided.
+          Leave with a fresh silhouette that grows out beautifully.
+        </p>
+        <a href="contact.html" class="btn-outline-gold">Book Now</a>
+      </article>
+
+      <!-- Hair Colouring -->
+      <article class="sd-card">
+        <h3>Hair Colouring</h3>
+        <p>
+          Global colour, highlights, lowlights, balayage, or root touch-ups using salon-grade brands.
+          Shade mapping is done to suit your undertone and workplace needs.
+          We use bond-protect technology (where applicable) to preserve hair strength and shine.
+          Post-colour care plan included for long-lasting tone and gloss.
+        </p>
+        <a href="contact.html" class="btn-outline-gold">Book Now</a>
+      </article>
+
+      <!-- Hair Spa -->
+      <article class="sd-card">
+        <h3>Hair Spa</h3>
+        <p>
+          Deep-nourishing rituals for dryness, frizz, dandruff, or hair fall.
+          Cleanse, targeted mask, and relaxing scalp massage to boost circulation.
+          Steam or warm-towel therapy enhances absorption and softness.
+          Expect calmer scalp, smoother lengths, and a healthy, mirror-like shine.
+        </p>
+        <a href="contact.html" class="btn-outline-gold">Book Now</a>
+      </article>
+
+      <!-- Facials & Cleanups -->
+      <article class="sd-card">
+        <h3>Facials & Cleanups</h3>
+        <p>
+          Customized facials for hydration, tan removal, brightening, or anti-aging—chosen after a quick skin check.
+          Includes cleanse, exfoliation, massage, mask, and targeted serums.
+          Products are carefully selected to suit oily, dry, or sensitive skin.
+          Walk out with visible glow, refined texture, and relaxed facial muscles.
+        </p>
+        <a href="contact.html" class="btn-outline-gold">Book Now</a>
+      </article>
+
+      <!-- Bridal Makeup -->
+      <article class="sd-card">
+        <h3>Bridal Makeup</h3>
+        <p>
+          Flawless HD or airbrush base, soft-focus eyes, and sculpting tailored to your features and outfit.
+          Includes hairstyling and draping as per package. Trial can be scheduled beforehand.
+          Long-wear, flash-proof products for ceremonies and photography.
+          Calm, timely execution so you enjoy your big day, stress-free.
+        </p>
+        <a href="contact.html" class="btn-outline-gold">Book Now</a>
+      </article>
+
+      <!-- Party Makeup -->
+      <article class="sd-card">
+        <h3>Party Makeup</h3>
+        <p>
+          From soft glam to bold evening looks, we match your event vibe and outfit colours.
+          Skin is prepped for a smooth, long-lasting base; eyes and lips balanced for elegance.
+          False lashes optional. Quick hair touch-ups available.
+          Perfect for receptions, birthdays, and corporate events.
+        </p>
+        <a href="contact.html" class="btn-outline-gold">Book Now</a>
+      </article>
+
+      <!-- Nail Art -->
+      <article class="sd-card">
+        <h3>Nail Art</h3>
+        <p>
+          Gel polish, French, ombré, chrome, and custom nail art with clean cuticle work.
+          Extensions available in natural, square, or almond shapes.
+          We use quality gels for shine and chip-resistance.
+          Aftercare guidance ensures your manicure stays flawless longer.
+        </p>
+        <a href="contact.html" class="btn-outline-gold">Book Now</a>
+      </article>
+    </div>
+  </div>
+</section>
+<!-- ========== /DETAILED SERVICES ========== -->
+
+
+</div>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section contact-info">
+                <h3>Contact Info</h3>
+                <p><strong>Phone:</strong><br>+91 9967563589</p>
+                <p><strong>Email:</strong><br><a href="mailto:sahilmokal19@gmail.com">sahilmokal19@gmail.com</a></p>
+            </div>
+
+            <div class="footer-section quick-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Location</a></li>
+                    <li><a href="#">Learn with Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section services">
+                <h3>Services</h3>
+                <ul>
+                    <li>Eys Leshh</li>
+                    <li>BB Glow Facial</li>
+                    <li>Hydra Facial</li>
+                    <li>Plumping</li>
+                    <li>Nail Art</li>
+                    <li><a href="#">View All Services</a></li>
+                </ul>
+            </div>
+
+
+            <div class="footer-section social-links">
+                <h3>Social Links</h3>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/vanita_makeover_111/" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" target="_blank" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 SanMakeover. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+const detailSection = document.getElementById("service-detail");
+const detailTitle = document.getElementById("service-title");
+const detailDesc = document.getElementById("service-description");
+const closeBtn = document.querySelector(".close-btn");
+
+const services = {
+  "Hair Styling": "From bridal buns to glam waves and sleek ponytails, every look is tailored to your outfit and face shape. We prep with heat protectants and volumizers, then finish with humidity-resistant setting.",
+  "Hair Cutting": "Precision cuts designed around your lifestyle—bobs, layers, fringes, or trims. Includes cleanse and blow-dry. Style tips provided.",
+  "Hair Colouring": "Global colour, highlights, balayage, or root touch-ups using salon-grade brands. Includes bond-protect technology and after-care advice.",
+  "Hair Spa": "Deep nourishment for dryness, frizz, dandruff, or hair fall. Includes scalp massage, steam therapy, and smoothing finish.",
+  "Facials & Cleanups": "Customized facials for hydration, brightening, or anti-aging. Includes cleanse, exfoliation, massage, mask, and serums.",
+  "Bridal Makeup": "Flawless HD/airbrush base, sculpting, and draping. Long-wear products for ceremonies and photography.",
+  "Party Makeup": "Soft glam to bold evening looks with skin prep, eye focus, and optional lashes. Perfect for receptions and birthdays.",
+  "Nail Art": "Gel polish, ombré, chrome, or custom nail art. Extensions available with aftercare guidance."
+};
+
+// Open section
+document.querySelectorAll(".service-card").forEach(card => {
+  card.addEventListener("click", () => {
+    const serviceName = card.getAttribute("data-service");
+    detailTitle.textContent = serviceName;
+    detailDesc.textContent = services[serviceName] || "Details coming soon...";
+    detailSection.classList.add("active");
+    window.scrollTo({ top: detailSection.offsetTop - 100, behavior: "smooth" });
+  });
+});
+
+// Close section
+closeBtn.addEventListener("click", () => {
+  detailSection.classList.remove("active");
+});
+</script>
+
+</body>
+
+</html>
