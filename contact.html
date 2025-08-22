@@ -6,6 +6,9 @@
     <title>Contact us </title>
       <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    
+  </style>
 
 </head>
 <body>
@@ -36,16 +39,35 @@
   </header>
 
   <!-- Mobile Menu -->
+    <!-- Mobile Menu -->
   <div class="mobile-menu" id="mobileMenu">
     <button class="close-btn" onclick="toggleMenu()">×</button>
     <a href="index.html">Home</a>
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Location</a>
-    <a href="#">Learn With Us</a>
-    <a href="">Contact Us</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="location.html">Location</a>
+    <a href="learnwithus.html">Learn With Us</a>
+    <a href="contact.html">Book Appointment</a>
   </div>
+    <script>
+    function toggleMenu() {
+      document.getElementById("mobileMenu").classList.toggle("active");
+    }
+  </script>
+  <!-- Hero Section -->
+<div style="background: url('images/appointment-bg.jpg') center/cover no-repeat; 
+            height: 250px; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            color: white; 
+            text-align: center;">
+  <h1 style="font-size: 42px; font-weight: 700; margin: 0;">Book Appointment</h1>
+  <p style="font-size: 18px; margin-top: 10px;">Your beauty, our responsibility ✨</p>
+</div>
 
+  
 <section class="appointment-section">
 
   

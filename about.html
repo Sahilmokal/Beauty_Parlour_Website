@@ -26,7 +26,7 @@
 
             <nav class="nav-right">
                 <ul>
-                    <li><a href="#">Location</a></li>
+                    <li><a href="location.html">Location</a></li>
                     <li><a href="learnwithus.html">Learn With Us</a></li>
                     <li><a href="contact.html">Book Appointment</a></li>
                 </ul>
@@ -35,6 +35,22 @@
             <button class="hamburger" onclick="toggleMenu()">☰</button>
         </div>
     </header>
+      <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="close-btn" onclick="toggleMenu()">×</button>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="location.html">Location</a>
+    <a href="learnwithus.html">Learn With Us</a>
+    <a href="contact.html">Book Appointment</a>
+  </div>
+    <script>
+    function toggleMenu() {
+      document.getElementById("mobileMenu").classList.toggle("active");
+    }
+  </script>
+  
 <section id="about" class="about-section">
   <div class="about-container">
     <div class="about-image">
