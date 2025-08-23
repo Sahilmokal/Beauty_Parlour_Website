@@ -759,7 +759,7 @@ strong {
 /* Main Section */
 .appointment-section {
   background: #fff;
-  padding: 40px 80px;
+  padding: 40px 60px;
   font-family: 'Poppins', sans-serif;
   color: #000;
   max-width: 100%;
@@ -788,12 +788,12 @@ strong {
 .appointment-content {
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 50px;
 }
 
 /* Left: Form */
 .appointment-left {
-  flex: 1 1 60%;
+  flex: 1 1 50%;
 }
 
 .appointment-form label {
@@ -876,7 +876,7 @@ strong {
   display: inline-block;
   width: 35px;
   height: 35px;
-  background: #000;
+  background: white;
   color: #fff;
   text-align: center;
   line-height: 35px;
@@ -884,6 +884,7 @@ strong {
   font-size: 1rem;
   margin-right: 8px;
   transition: background 0.3s ease;
+  border-radius: 50%;
 }
 
 .social-links a:hover {
@@ -897,3 +898,83 @@ strong {
   }
 }
 
+.service-card img {
+  transition: transform 0.4s ease;
+}
+.service-card:hover img {
+  transform: scale(1.05);
+}
+.appointment-form button {
+  background: var(--gold);
+  color: #000;
+}
+.appointment-form button:hover {
+  background: #000;
+  color: var(--gold);
+}
+/* Appointment Form Inputs */
+.appointment-form input,
+.appointment-form textarea,
+.appointment-form select {
+  width: 90%;
+  max-width: 900px;
+  padding: 10px 12px;
+  font-size: 0.9rem;
+  display: block;
+  margin: 0 auto 15px; /* keeps all fields centered */
+}
+
+/* Appointment Form Button */
+.appointment-form button {
+  width: 200px;          /* fixed width */
+  padding: 12px 0;       /* balanced height */
+  display: block;
+  margin: 20px auto 0;   /* centers button */
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .appointment-content {
+    flex-direction: column;
+  }
+
+  .appointment-left,
+  .appointment-right {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .appointment-form input,
+  .appointment-form textarea,
+  .appointment-form select {
+    width: 100%;     /* full width on mobile */
+  }
+
+  .appointment-form button {
+    width: 100%;
+    max-width: 100%; /* button also full width */
+    margin: 15px 0 0;
+  }
+
+  .appointment-right {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .appointment-form input,
+  .appointment-form textarea,
+  .appointment-form select {
+    font-size: 0.85rem;
+    padding: 8px 10px;
+  }
+
+  .appointment-form button {
+    padding: 10px 0;
+    font-size: 0.9rem;
+  }
+}
