@@ -14,7 +14,7 @@ import coursesRoutes from "./routes/courses.js";
 import meRoutes from "./routes/me.js";
 import Course from "./models/Course.js";
 import courseBookingsRoutes from "./routes/courseBookings.js";
-
+import adminRoutes from "./routes/adminRoutes.js";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -25,7 +25,7 @@ app.use(express.json());
 // Serve uploaded files (avatars, etc.) from /uploads
 const uploadsPath = path.join(process.cwd(), "uploads");
 app.use("/uploads", express.static(uploadsPath));
-
+app.use("/api/admin", adminRoutes);
 // Serve static images used by courses (project-root/public/images)
 app.use("/images", express.static(path.join(__dirname, "public", "images")));
 

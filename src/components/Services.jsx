@@ -1,3 +1,4 @@
+import React from "react";
 const services = [
   { img: "/images/hair-styling.jpg", title: "Hair Styling", desc: "Trendy and bridal styles." },
   { img: "/images/hair-cutting.jpg", title: "Hair Cutting", desc: "Professional haircuts." },

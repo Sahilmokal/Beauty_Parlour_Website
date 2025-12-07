@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
+import React from "react";
 
 import Home from "./pages/Home.jsx";
 import Courses from "./pages/Courses.jsx";
@@ -17,6 +17,8 @@ import MyBookings from "./pages/MyBookings.jsx";
 import CourseBookingModal from "./components/CourseBookingModal.jsx";
 import EnrollmentsPage from "./pages/Enrollments.jsx";
 import ProfilePage from "./pages/Profile.jsx";
+import AdminLogin from "./pages/AdminLogin.jsx";
+import AdminDashboard from "./pages/AdminDashboard.jsx";
 
 
 function App() {
@@ -40,7 +42,8 @@ function App() {
 <Route path="/appointment-history" element={<AppointmentHistory />} />
 <Route path="/book-service" element={<Booking />}/>
 <Route path="/my-bookings" element={<MyBookings/>}/>
-
+<Route path="/admin" element={<AdminLogin/>}/>
+<Route path="/adminDashboard" element={<AdminDashboard/>}/>
       </Routes>
 
       

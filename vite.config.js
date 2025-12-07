@@ -9,4 +9,10 @@ export default defineConfig({
       "/api": "http://localhost:5000",
     },
   },
+   plugins: [
+    react({
+      // ensure automatic runtime so importing React is NOT required
+      jsxRuntime: "automatic"
+    })
+  ]
 })

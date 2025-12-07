@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-
+import React from "react";
 const reviewList = [
   { text: "Absolutely loved the facial treatment!", author: "Priya Sharma" },
   { text: "Top-class service. Highly Recommended!", author: "Anjali Mehta" },

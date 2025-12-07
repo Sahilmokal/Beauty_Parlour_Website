@@ -1,3 +1,4 @@
+// models/User.js
 import mongoose from "mongoose";
 
 const userSchema = new mongoose.Schema(
@@ -13,7 +14,7 @@ const userSchema = new mongoose.Schema(
       trim: true,
       lowercase: true,
       unique: true,
-      sparse: true, // VERY IMPORTANT → avoids duplicate-null errors
+      sparse: true, // avoids duplicate-null errors
     },
 
     phone: { type: String, default: "" },
@@ -21,6 +22,9 @@ const userSchema = new mongoose.Schema(
     bio: { type: String, default: "" },
 
     avatar: { type: String, default: "" }, // stored URL/base64
+
+    // role: default to "user" so old docs are still fine (non-breaking)
+    role: { type: String, enum: ["user", "admin"], default: "user" },
   },
   { timestamps: true }
 );
