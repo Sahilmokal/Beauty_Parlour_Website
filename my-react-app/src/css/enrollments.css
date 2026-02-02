@@ -1,0 +1,206 @@
+/* src/css/enrollments.css
+   Compact Enrollments page tuned to your header:
+   - Desktop header height = 70px
+   - Mobile header height  = 90px (same breakpoint as your header)
+   - Keeps gold / white / black theme
+*/
+
+/* ===== PAGE WRAPPER ===== */
+.enrollments-page {
+  max-width: 780px;                      /* compact width for 14" laptop */
+  margin: 0 auto;
+  padding: 6px 12px;                    /* horizontal padding */
+       /* desktop: header (70px) + breathing room */
+  box-sizing: border-box;
+  min-height: calc(100vh - 70px);        /* fit below header */
+  background: transparent;
+  color: #0f1724;
+}
+
+/* ===== HERO / PAGE HEADER ===== */
+.enrollments-hero {
+  padding: 0px 14px;
+  background: linear-gradient(90deg, rgba(212,175,55,0.04), rgba(0,0,0,0.02));
+  border-radius: 10px;
+  border-top: 5px solid #d4af37;
+}
+
+.enrollments-hero h1,
+.enrollments-hero .h1 {
+  margin: 0;
+  font-size: 18px;
+  color: #0f1724;
+  font-weight: 800;
+}
+
+.enrollments-hero p,
+.enrollments-hero .lead2 {
+  margin: 6px 0 0;
+  font-size: 13px;
+  color: #475569;
+}
+
+/* ===== EMPTY / NO DATA ===== */
+.empty {
+  text-align: center;
+  padding: 20px 14px;
+  color: #6b7280;
+  border-radius: 10px;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.04);
+  box-shadow: 0 6px 20px rgba(2,6,23,0.04);
+ 
+}
+.empty.error { color: #b91c1c; }
+
+/* ===== GRID & CARD ===== */
+.enrollments-grid {
+  display: grid;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.enrollment-card {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid rgba(0,0,0,0.04);
+  box-shadow: 0 6px 20px rgba(2,6,23,0.04);
+  box-sizing: border-box;
+}
+
+/* hide left image (not used) */
+.enrollment-card .left { display: none !important; }
+
+/* middle column */
+.enrollment-card .middle {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* title row */
+.enrollment-card .title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.enrollment-card .title {
+  margin: 0;
+  font-size: 15px;
+  color: #0f1724;
+  font-weight: 700;
+}
+
+/* status badge */
+.enrollment-card .status {
+  padding: 4px 9px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 11px;
+  color: #fff;
+  background: linear-gradient(90deg, #d4af37, #b9892b);
+  box-shadow: 0 4px 12px rgba(212,175,55,0.18);
+}
+
+/* meta row */
+.meta-row { display:flex; gap:10px; font-size:12px; color: #6b7280; }
+
+/* notes */
+.notes {
+  font-size: 13px;
+  color: #374151;
+  background: #fff9f1;
+  border: 1px solid rgba(212,175,55,0.10);
+  padding: 8px;
+  border-radius: 8px;
+}
+
+/* right column */
+.enrollment-card .right {
+  width: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+/* price */
+.enrollment-card .price {
+  font-weight: 800;
+  font-size: 14px;
+  color: #0f1724;
+}
+
+/* buttons */
+.btn {
+  padding: 7px 10px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 13px;
+  border: none;
+}
+
+.btn-danger {
+  background: #fff5f5;
+  border: 1px solid #f9bdbd;
+  color: #a10000;
+}
+
+/* small helper */
+.enrollments-page :where(.enrollment-card) { word-break: break-word; }
+
+/* ===== RESPONSIVE: matches your header breakpoint (mobile) =====
+   On mobile header height in your header CSS is 90px,
+   so adjust content offset and min-height accordingly.
+*/
+@media (max-width: 768px) {
+  .enrollments-page {
+   
+    min-height: calc(100vh - 90px);
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .enrollment-card { flex-direction: column; gap: 8px; }
+  .enrollment-card .right {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .btn { width: 100%; }
+}
+
+/* minor visual tweak if the page is inside other containers */
+.enrollments-page .title { line-height: 1.1; }
+/* ensure page content starts below header (uses CSS var set in header or by JS) */
+/* Simple centered page title (keeps existing <h1> element) */
+.enrollments-page > h1 {
+  margin: 0 auto 14px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 800;
+  color: #0f1724;
+  letter-spacing: 0.2px;
+  position: relative;
+  padding: 8px 12px;
+  max-width: 780px;
+}
+
+/* gold underline */
+.enrollments-page > h1::after {
+  content: "";
+  display: block;
+  width: 84px;
+  height: 6px;
+  background: linear-gradient(90deg,#d4af37,#b9892b);
+  border-radius: 6px;
+  margin: 10px auto 0;
+  box-shadow: 0 6px 18px rgba(212,175,55,0.12);
+}

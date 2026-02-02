@@ -1,0 +1,411 @@
+/* learn.css (replace previous file) */
+
+/* --- HERO --- */
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  /* full viewport minus header (approx). Adjust 100px if your header is different */
+  min-height: calc(100vh - 100px);
+  background: linear-gradient(180deg, rgba(18,18,20,0.04), rgba(0,0,0,0.02));
+}
+
+.hero-inner.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* overlay decorative (optional) */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: url('/images/hero-bg.jpg') center/cover no-repeat; /* optional */
+  opacity: 0.06;
+  pointer-events: none;
+}
+
+/* container tuned for 14" laptop */
+.learn .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 28px 20px;
+  box-sizing: border-box;
+}
+
+/* Courses grid: responsive columns */
+.grid.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+  align-items: stretch;
+}
+
+/* Course card */
+.course {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 28px rgba(2,6,23,0.06);
+  border: 1px solid rgba(0,0,0,0.04);
+  transition: transform .16s ease, box-shadow .16s ease;
+  height: 100%;
+}
+
+/* hover */
+.course:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 50px rgba(2,6,23,0.08);
+}
+
+/* image area slightly taller */
+.course img {
+  width: 100%;
+  height: 210px; /* increased */
+  object-fit: cover;
+  display: block;
+  flex: 0 0 auto;
+  background: #f5f5f7;
+}
+
+/* body expands so actions stay bottom-aligned */
+.course-body {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  gap: 10px;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+/* title row */
+.course-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+/* bullets wrapper: clamp and fade when not expanded */
+.bullets-wrap {
+  position: relative;
+}
+
+/* when not expanded, clamp list to ~4 lines using -webkit-line-clamp */
+.bullets-wrap:not(.expanded) .bullets {
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* number of lines before truncation */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 6px 0 0 0;
+  padding-left: 18px;
+  color: #374151;
+  line-height: 1.45;
+}
+
+/* full expanded list */
+.bullets-wrap.expanded .bullets {
+  display: block;
+  margin: 6px 0 0 0;
+  padding-left: 18px;
+  color: #374151;
+  line-height: 1.45;
+}
+
+/* fade overlay on clamped content */
+.bullets-wrap .fade-bottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 34px; /* above the actions row */
+  height: 40px;
+  pointer-events: none;
+  background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1));
+  border-radius: 0 0 8px 8px;
+}
+
+/* meta */
+.course-body .meta {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+/* actions pinned to bottom */
+.actions {
+  display: flex;
+  gap: 8px;
+  margin-top: auto;
+  align-items: center;
+}
+
+/* buttons */
+.btn {
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-ghost {
+  background: #f8fafc;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+/* badge */
+.badge {
+  background: rgba(15,23,36,0.04);
+  padding: 6px 8px;
+  border-radius: 999px;
+  font-size: 13px;
+  color: #111827;
+}
+
+/* responsive adjustments */
+@media (max-width: 900px) {
+  .course img { height: 180px; }
+  .grid.course-grid { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+}
+
+@media (max-width: 480px) {
+  .hero-inner.container { padding: 28px 12px; }
+  .course img { height: 150px; }
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: url('/images/hero-bg.jpg') center/cover no-repeat;
+  opacity: 0.06;
+  pointer-events: none;
+}
+/* ensure badge never breaks across lines */
+.badge {
+  display: inline-block;
+  white-space: nowrap;
+  padding: 6px 8px;
+  border-radius: 999px;
+  background: rgba(15,23,36,0.04);
+  font-size: 13px;
+  color: #111827;
+}
+/* Booking modal — gold / white / black theme, compact for 14" laptop */
+
+/* overlay */
+.booking-modal__overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(2,6,23,0.45);
+  padding: 20px;
+}
+
+/* dialog (compact size for 14" laptop) */
+.booking-modal__dialog {
+  width: 520px;               /* slightly compact */
+  max-width: calc(100% - 40px);
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 18px 50px rgba(2,6,23,0.18);
+  overflow: hidden;
+  border-top: 6px solid #d4af37; /* gold accent bar */
+}
+
+/* header */
+.booking-modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 18px;
+  background: linear-gradient(90deg, rgba(212,175,55,0.02), rgba(0,0,0,0));
+}
+
+.booking-modal__eyebrow {
+  font-size: 12px;
+  color: #6b7280;
+  letter-spacing: 0.4px;
+}
+
+.booking-modal__title {
+  margin: 2px 0 0;
+  font-size: 18px;
+  color: #0f1724; /* black shade */
+}
+
+/* close button */
+.booking-modal__close {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #0f1724;
+}
+
+/* form */
+.booking-modal__form {
+  padding: 14px 18px 18px;
+  display: block;
+  gap: 10px;
+}
+
+/* label row */
+.bm-row {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.bm-row--two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+/* label text */
+.bm-label {
+  display: block;
+  font-size: 13px;
+  color: #374151;
+  margin-bottom: 6px;
+}
+
+/* inputs */
+.bm-input {
+  width: 100%;
+  padding: 9px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(15,23,36,0.08);
+  background: #fff;
+  font-size: 14px;
+  color: #0f1724;
+  box-sizing: border-box;
+}
+
+/* textarea slightly taller */
+.bm-input[type="date"] { padding: 8px 10px; }
+
+/* error */
+.bm-error {
+  margin-top: 8px;
+  color: #b91c1c; /* red */
+  font-size: 13px;
+}
+
+/* actions */
+.bm-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+/* buttons */
+.bm-btn {
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.bm-btn--ghost {
+  background: #fff;
+  color: #0f1724;
+  border: 1px solid rgba(15,23,36,0.06);
+}
+
+.bm-btn--primary {
+  background: #0f1724; /* deep black */
+  color: #fff;
+  border: 2px solid #d4af37; /* gold border */
+  box-shadow: 0 6px 16px rgba(212,175,55,0.12);
+}
+
+/* make primary button slightly larger on hover */
+.bm-btn--primary:hover { transform: translateY(-2px); }
+
+/* responsive: smaller width for narrow screens */
+@media (max-width: 900px) {
+  .booking-modal__dialog { width: 460px; }
+}
+
+@media (max-width: 600px) {
+  .booking-modal__dialog { width: 100%; border-radius: 10px; margin: 6px; }
+  .bm-row--two { grid-template-columns: 1fr; }
+}
+/* --------- HERO ACTIONS (centered buttons with bigger gap) --------- */
+.hero-actions {
+  margin-top: 22px;
+  display: flex;
+  gap: 22px;                  /* increased spacing */
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Base button styling */
+.hero-actions .btn,
+.hero .btn,
+.cta .btn {
+  min-width: 170px;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-weight: 800;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: all 150ms ease;
+  border: none;
+}
+
+/* Gold background for BOTH buttons */
+.btn-primary,
+.btn-secondary {
+  background: linear-gradient(180deg, #f7e39b, #d4af37);
+  color: #0f0f0f;
+  border: 2px solid rgba(0,0,0,0.05);
+  box-shadow: 0 10px 28px rgba(212,175,55,0.16);
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px rgba(212,175,55,0.20);
+  opacity: 0.97;
+}
+
+/* CTA Bottom Button */
+.cta .btn-primary {
+  min-width: 190px;
+}
+
+/* Small screens */
+@media (max-width: 640px) {
+  .hero-actions {
+    gap: 14px;
+  }
+  .hero-actions .btn {
+    min-width: 150px;
+    padding: 10px 16px;
+  }
+}
+
+/* Focus ring */
+.hero-actions .btn:focus,
+.hero .btn:focus,
+.cta .btn:focus {
+  outline: 3px solid rgba(212,175,55,0.28);
+  outline-offset: 3px;
+}

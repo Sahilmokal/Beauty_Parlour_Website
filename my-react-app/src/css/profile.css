@@ -1,0 +1,221 @@
+/* src/css/profile.css
+   Golden / Black / White theme for Profile page
+   Copy-paste whole file
+*/
+
+:root{
+  --gold: #d4af37;
+  --gold-dark: #b88f2a;
+  --bg: #ffffff;
+  --muted: #777;
+  --black: #0f0f0f;
+  --card-shadow: 0 10px 30px rgba(16,16,16,0.08);
+  --glass: rgba(0,0,0,0.04);
+}
+
+/* Page shell */
+.profile-shell {
+  min-height: 72vh;
+  padding: 40px 20px;
+  background: linear-gradient(180deg, #fff, #fff);
+  color: var(--black);
+  font-family: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial;
+}
+
+/* center container */
+.container {
+  width: 94%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Header */
+.profile-header {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--black);
+  margin: 0 0 20px;
+  letter-spacing: 0.3px;
+  display: inline-block;
+  position: relative;
+}
+
+/* Card */
+.profile-card {
+  background: var(--bg);
+  border-radius: 14px;
+  padding: 26px;
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--glass);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+/* Info rows (view mode) */
+.info-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, rgba(212,175,55,0.03), rgba(0,0,0,0.00));
+}
+
+.info-row + .info-row { margin-top: 8px; }
+
+.label {
+  min-width: 120px;
+  font-weight: 700;
+  color: var(--gold-dark);
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.value {
+  color: var(--black);
+  font-weight: 600;
+  font-size: 15px;
+}
+
+/* Bio block */
+.info-bio {
+  margin-top: 6px;
+  padding: 14px;
+  border-radius: 10px;
+  background: #fff9ea;
+  border: 1px solid rgba(212,175,55,0.08);
+}
+
+.info-bio .label { display: block; margin-bottom: 6px; }
+
+/* Actions row */
+.profile-actions-row {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-start;
+  margin-top: 12px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  transition: transform .08s ease, box-shadow .12s ease, opacity .12s ease;
+}
+
+/* Outline button */
+.btn-outline {
+  background: transparent;
+  color: var(--black);
+  border: 2px solid rgba(16,16,16,0.06);
+  box-shadow: none;
+}
+.btn-outline:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.06); }
+
+/* Gold primary button */
+.btn-gold {
+  background: linear-gradient(180deg,var(--gold),var(--gold-dark));
+  color: #000;
+  padding: 10px 16px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(212,175,55,0.14);
+}
+.btn-gold:hover { filter: brightness(1.03); transform: translateY(-2px); }
+
+/* Cancel or destructive */
+.btn-cancel {
+  background: transparent;
+  color: #333;
+  border: 1px solid rgba(0,0,0,0.06);
+  padding: 10px 14px;
+  border-radius: 10px;
+}
+
+/* FORM (edit mode) */
+.profile-form {
+  display: grid;
+  gap: 12px;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-label {
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .8px;
+}
+
+.profile-form input,
+.profile-form textarea {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.06);
+  font-size: 14px;
+  outline: none;
+  transition: border-color .12s ease, box-shadow .12s ease;
+  background: #fff;
+  color: var(--black);
+}
+
+.profile-form input:focus,
+.profile-form textarea:focus {
+  border-color: var(--gold);
+  box-shadow: 0 6px 18px rgba(212,175,55,0.06);
+}
+
+.profile-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
+/* Empty / loading state */
+.profile-shell .profile-card .empty {
+  padding: 24px;
+  text-align: center;
+  color: var(--muted);
+}
+
+/* Responsive */
+@media (min-width: 900px) {
+  .profile-card {
+    grid-template-columns: 1fr 1.2fr; /* left: ids, right: details (if you later re-add avatar) */
+    align-items: start;
+  }
+
+  .profile-avatar-col { display: none; } /* ensure hidden if present elsewhere */
+}
+
+@media (max-width: 899px) {
+  .label { min-width: 100px; }
+  .profile-actions-row { justify-content: center; flex-wrap: wrap; }
+  .profile-card { padding: 18px; }
+  .container { width: 96%; }
+}
+
+/* Small polish */
+.profile-header::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: var(--gold);
+  margin-top: 8px;
+  border-radius: 2px;
+}

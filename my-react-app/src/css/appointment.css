@@ -1,0 +1,154 @@
+/* ---------- Compact Appointment Section (optimized for 14" laptops) ---------- */
+
+/* Container: increased width */
+.appointment-section {
+  background: #fff;
+  padding: 16px 40px;
+  font-family: 'Poppins', sans-serif;
+  color: #000;
+  max-width: 1380px;     /* increased from 1280px → 1380px */
+  margin: 28px auto;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+}
+
+/* Two-column layout with increased width */
+.appointment-content {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* Left form column – SLIGHTLY wider now */
+.appointment-left {
+  flex: 1 1 62%;     /* increased from 58% → 62% */
+  min-width: 300px;
+}
+
+/* Right info column – slightly narrower */
+.appointment-right {
+  flex: 0 0 32%;     /* decreased from 34% → 32% */
+  min-width: 240px;
+}
+
+.appointment-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  font-size: 13px;
+  color: #333;
+}
+
+.appointment-form input,
+.appointment-form select,
+.appointment-form textarea {
+  width: 100%;
+  padding: 9px 12px;
+  margin-bottom: 12px;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #111;
+  background: #fff;
+  box-sizing: border-box;
+  transition: box-shadow .12s ease, border-color .12s ease;
+}
+
+.appointment-form textarea {
+  min-height: 72px;
+  resize: vertical;
+}
+
+.appointment-form input:focus,
+.appointment-form select:focus,
+.appointment-form textarea:focus {
+  outline: none;
+  border-color: #d4af37;
+  box-shadow: 0 6px 16px rgba(212,175,55,0.08);
+}
+
+/* Time select */
+.time-select {
+  appearance: none;
+  padding-right: 36px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path fill='%23333' d='M6 8L0 0h12z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-color: #fff;
+}
+
+.submit-btn,
+.history-btn {
+  display: inline-block;
+  padding: 10px 14px;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+}
+
+/* Submit Button */
+.submit-btn {
+  background: #000;
+  color: #fff;
+  font-weight: 700;
+  transition: transform .08s ease, box-shadow .12s ease;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* History Button */
+.history-btn {
+  background: #d4af37;
+  color: #000;
+  font-weight: 700;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+/* Right Column Text */
+.appointment-right h3 {
+  font-size: 14px;
+  color: #111;
+  margin-bottom: 8px;
+}
+
+.appointment-right p {
+  font-size: 13px;
+  color: #444;
+  line-height: 1.45;
+  margin-bottom: 12px;
+}
+
+/* Tablet responsiveness */
+@media (max-width: 1100px) {
+  .appointment-section {
+    padding: 14px 22px;
+    max-width: 1080px;   /* increased for smoother scaling */
+  }
+
+  .appointment-content { gap: 32px; }
+
+  .appointment-right { flex-basis: 100%; order: 2; }
+  .appointment-left { flex-basis: 100%; order: 1; }
+}
+
+/* 14-inch (1280–1440) tuning */
+@media (min-width: 1200px) and (max-width: 1440px) {
+  .appointment-section {
+    max-width: 1220px;  /* increased from 940px → 1320px */
+    padding: 18px 36px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .submit-btn, .history-btn { padding: 12px 16px; font-size: 15px; }
+  .appointment-form input, .appointment-form select { font-size: 15px; padding: 12px; }
+  .appointment-section { padding: 18px 14px; margin: 16px 10px; }
+}
